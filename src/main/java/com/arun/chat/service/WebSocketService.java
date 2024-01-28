@@ -1,0 +1,16 @@
+package com.arun.chat.service;
+
+import com.arun.chat.model.ChatMessage;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Service;
+
+@Service
+public class WebSocketService {
+    @Autowired
+    private SimpMessagingTemplate messagingTemplate;
+
+    public void broadcastMessage(ChatMessage message) {
+        messagingTemplate.convertAndSend("/topic/public", message);
+    }
+}
