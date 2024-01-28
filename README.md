@@ -66,32 +66,3 @@ Kafka Data Replication: Set up Kafka with replication for fault tolerance.
 Database Backups: Regularly back up user profiles and message history if using a database.
 
 
-**Project Structure ::**
-
-chat-application/
-|-- src/
-|   |-- main/
-|       |-- java/
-|           |-- com.example.chat/
-|               |-- ChatApplication.java
-|               |-- config/
-|                   |-- KafkaConfig.java
-|               |-- controller/
-|                   |-- ChatController.java
-|               |-- model/
-|                   |-- ChatMessage.java
-|               |-- service/
-|                   |-- ChatService.java
-|                   |-- KafkaProducerService.java
-|                   |-- WebSocketService.java
-|-- src/
-|   |-- main/
-|       |-- resources/
-|           |-- application.properties
-|           |-- static/
-|               |-- index.html
-|           |-- templates/
-|           |-- META-INF/
-|               |-- resources/
-|-- pom.xml
-
